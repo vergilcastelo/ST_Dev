@@ -29,7 +29,12 @@ public class PlayerObject : MonoBehaviour
         //log it to check 
         Debug.Log(Name);
 
-        //Create Color 
+        //Set Color from ColorsList randomly
+        Color = GlobalManager.ColorsList[Random.Range(0, GlobalManager.ColorsList.Count)];
+
+        //log Color to check
+        Debug.Log(Color)
+       
     }
 
 }
