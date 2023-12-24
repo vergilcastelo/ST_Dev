@@ -23,7 +23,14 @@ public class PlayerObject : MonoBehaviour
     //Generate method used to populate our player data in editor only    
      public void Generate()
     {
+        //make sure list are populated
+        if(GlobalDataManager.AdjectivesList.Count < 1)
+        {
+            GlobalDataManager.PopulateLists();
+        }
+        
         //local vars taken from AdjectivesList and ItemNamesList randomly
+        Debug.Log(GlobalDataManager.AdjectivesList.Count);
         string adjective = GlobalDataManager.AdjectivesList[Random.Range(0, GlobalDataManager.AdjectivesList.Count)];
         string itemName = GlobalDataManager.ItemNamesList[Random.Range(0, GlobalDataManager.ItemNamesList.Count)];
         
