@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//for Editor tools
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 /*
 Player Object
@@ -31,7 +35,7 @@ public class PlayerObject : MonoBehaviour
 
         //Set Color from ColorsList randomly
         string colorName = GlobalDataManager.ColorsList[Random.Range(0, GlobalDataManager.ColorsList.Count)];
-        
+
         //use utility to convert string into Color type
         ColorUtility.TryParseHtmlString(colorName, out Color);
 
@@ -39,12 +43,26 @@ public class PlayerObject : MonoBehaviour
         Debug.Log(Color);
 
         //Rename the GO to Name using lower camel case
-        gameObject.name = adjective.ToLower() +itemName;
+        gameObject.name = adjective.ToLower() + itemName;
 
         //log gameObject.name
         Debug.Log(gameObject.name);
-
-       
     }
 
 }
+//condition: in Unity IDE
+#if UNITY_EDITOR
+//custom inwpector window for this class
+[CustomEditor(typeof(PlayerObject))]
+//define class
+public class PlayerObjectEditor : Editor
+{
+    //override default functionality of base Editor class
+    public override void OnInspectorGUI()
+    {
+      
+    }
+
+}
+#endif
+
