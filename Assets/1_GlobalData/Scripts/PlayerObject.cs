@@ -30,10 +30,20 @@ public class PlayerObject : MonoBehaviour
         Debug.Log(Name);
 
         //Set Color from ColorsList randomly
-        Color = GlobalManager.ColorsList[Random.Range(0, GlobalManager.ColorsList.Count)];
+        string colorName = GlobalDataManager.ColorsList[Random.Range(0, GlobalDataManager.ColorsList.Count)];
+        
+        //use utility to convert string into Color type
+        ColorUtility.TryParseHtmlString(colorName, out Color);
 
         //log Color to check
-        Debug.Log(Color)
+        Debug.Log(Color);
+
+        //Rename the GO to Name using lower camel case
+        gameObject.name = adjective.ToLower() +itemName;
+
+        //log gameObject.name
+        Debug.Log(gameObject.name);
+
        
     }
 
