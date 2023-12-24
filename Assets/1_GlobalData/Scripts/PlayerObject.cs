@@ -60,7 +60,20 @@ public class PlayerObjectEditor : Editor
     //override default functionality of base Editor class
     public override void OnInspectorGUI()
     {
-      
+        //function auto draws a default inspector window 
+        //used to add button not have to redo entire inspector
+        DrawDefaultInspector();
+        
+        //target this script
+        PlayerObject script = (PlayerObject)target;
+
+        //automatic gui layout 
+        //add button
+        if(GUILayout.Button("Generate"))
+        {
+            //call generate on press
+            script.Generate();
+        }
     }
 
 }
