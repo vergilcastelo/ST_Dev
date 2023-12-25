@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //create 19 more player objects
-         for (int i = 0; i < 19; i++)
+         for (int i = 0; i < 20; i++)
         {
             //create GO to init player prefab
             GameObject newObj = Instantiate(playerObjectPrefab);
