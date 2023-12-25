@@ -24,20 +24,20 @@ public class GlobalDataManager : MonoBehaviour
     private List<string> colors = new List<string>();
 
     //external public lists with getters and setters
-    public static List<string> AdjectivesList { get; set; } = new List<string>();
-    public static List<string> ItemNamesList { get; set; } = new List<string>();
-    public static List<string> ColorsList { get; set; } = new List<string>();
+    public static List<string> AdjectivesList { get; private set; } = new List<string>();
+    public static List<string> ItemNamesList { get; private set; } = new List<string>();
+    public static List<string> ColorsList { get; private set; } = new List<string>();
+
 
     //Awake called to init variables before application starts 
     private void Awake()
     {
+        Debug.Log("on awake");
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            InitializeList(AdjectivesList, adjectives);
-            InitializeList(ItemNamesList, itemNames);
-            InitializeList(ColorsList, colors);
+            PopulateLists();
         }else
         {
             Destroy(gameObject);
@@ -45,13 +45,27 @@ public class GlobalDataManager : MonoBehaviour
     }
 
     //Generic method to initialize any list
-    private void InitializeList(List<string> targetList, List<string> sourceList)
+    private static void InitializeList(List<string> targetList, List<string> sourceList)
     {
         targetList.Clear();
-        for (int i = 0; i < sourceList.Count; i++)
+        foreach (string item in sourceList)
         {
-            targetList.Add(sourceList[i]);
+            targetList.Add(item);
         }
+    }
+
+    //PopulateLists method initialize list if empty
+    public static void PopulateLists()
+    {
+        //Set all lists
+        if(Instance != null){
+            InitializeList(AdjectivesList, Instance.adjectives);
+            Debug.Log("Adj Length " + AdjectivesList.Count);
+            InitializeList(ItemNamesList, Instance.itemNames);
+            InitializeList(ColorsList, Instance.colors);
+        }
+
+        Debug.Log("List are populated");
     }
 
     // Start is called before the first frame update
