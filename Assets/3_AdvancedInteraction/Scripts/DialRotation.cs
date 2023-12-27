@@ -32,8 +32,8 @@ public class DialRotation : MonoBehaviour
             lastMousePosition = Input.mousePosition;
            
         }
-        //when left mouse button 0 is held down
-        if (Input.GetMouseButton(0))
+        //when left mouse button 0 is held down and not snapping
+        if (Input.GetMouseButton(0) && !isReturningToZero)
         {
             //delta difference between last position and current
             Vector3 delta = Input.mousePosition - lastMousePosition;
@@ -54,7 +54,7 @@ public class DialRotation : MonoBehaviour
             Debug.Log("rotation is " + transform.localEulerAngles.y );
         }
 
-         // Snap to the nearest angle when the mouse button is released
+         // Snap to the nearest angle when the mouse button is released and not snapping
         if (Input.GetMouseButtonUp(0) && !isReturningToZero)
         {
             SnapToClosestAngle();
