@@ -47,13 +47,17 @@ public class DialRotation : MonoBehaviour
             ApplyRotationContraints();
 
             //rotat dial according to angle
-            transform.Rotate(Vector3.forward, angle, Space.World);
-
+            // Apply the rotation to the GameObject
+            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, currentAngle, transform.localEulerAngles.z);
+        
             //dial position or y axis due to rotation in scene
             Debug.Log("rotation is " + transform.localEulerAngles.y );
-            
-           
+        }
 
+         // Snap to the nearest angle when the mouse button is released
+        if (Input.GetMouseButtonUp(0) && !isReturningToZero)
+        {
+            SnapToClosestAngle();
         }
     }
 
@@ -79,4 +83,41 @@ public class DialRotation : MonoBehaviour
         while (angl > 360f) angl -= 360f;
         return angl;
     }
+
+    //snapping
+     void SnapToClosestAngle()
+    {
+        // Snap between 22 and 40 degrees
+        if (currentAngle > 22f && currentAngle < 40f)
+        {
+            currentAngle = 22f;
+        }
+        // Snap between 0 and 22 degrees
+        else if (currentAngle >= 0f && currentAngle <= 22f)
+        {
+            currentAngle = 0f;
+        }
+        // Snap between 307 and 360 or (0) degrees
+        else if (currentAngle >= 307f && currentAngle <= 360f)
+        {
+            currentAngle = 307f;
+            StartCoroutine(ReturnToZeroAfterDelay(1f));
+        }
+
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, currentAngle);
+    }
+
+    //coroutine for test delay return to zero
+     IEnumerator ReturnToZeroAfterDelay(float delay)
+    {
+        //set to condition so nothing else can happen 
+        isReturningToZero = true;
+        //wait
+        yield return new WaitForSeconds(delay);
+        //set back to 0
+        currentAngle = 0f;
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, currentAngle);
+        isReturningToZero = false;
+    }
+
 }
