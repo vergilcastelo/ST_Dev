@@ -12,7 +12,35 @@ public class DialRotation : MonoBehaviour
     private float currentAngle;
     //for test to return to after a while
     private bool isReturningToZero = false;
+    
+    //value ID
+    private string valueID = ""; // For storing the value ID
 
+    // Method to set the value ID
+    public void SetValueID(string val)
+    {
+        valueID = val;
+    }
+
+    // Method to set the knob's angle
+    public void SetValue(float val)
+    {
+        currentAngle = NormalizeAngle(val);
+        ApplyRotationContraints();
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, currentAngle, transform.localEulerAngles.z);
+    }
+
+    // Method to get the value ID
+    public string GetValueID()
+    {
+        return valueID;
+    }
+
+    // Method to get the current angle of the knob
+    public float GetValue()
+    {
+        return currentAngle;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -91,20 +119,34 @@ public class DialRotation : MonoBehaviour
         if (currentAngle > 22f && currentAngle < 40f)
         {
             currentAngle = 22f;
+             valueID = "ignition";
         }
         // Snap between 0 and 22 degrees
         else if (currentAngle >= 0f && currentAngle <= 22f)
         {
             currentAngle = 0f;
+            valueID = "off";
+        }
+        //Snap back to 0 between 314 and 360
+        else if (currentAngle >= 314f && currentAngle <= 360f)
+        {
+            currentAngle = 0f;
+             valueID = "off";
         }
         // Snap between 307 and 360 or (0) degrees
-        else if (currentAngle >= 307f && currentAngle <= 360f)
+        else if (currentAngle >= 307f && currentAngle <= 314f)
         {
             currentAngle = 307f;
-            StartCoroutine(ReturnToZeroAfterDelay(1f));
+            valueID = "test";
+            StartCoroutine(ReturnToZeroAfterDelay(2f));
+        }
+        else
+        {
+            // Reset valueID if not in any specific range
+            valueID = "";
         }
 
-        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, currentAngle);
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x,  currentAngle, transform.localEulerAngles.z);
     }
 
     //coroutine for test delay return to zero
@@ -116,7 +158,7 @@ public class DialRotation : MonoBehaviour
         yield return new WaitForSeconds(delay);
         //set back to 0
         currentAngle = 0f;
-        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, currentAngle);
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, currentAngle,  transform.localEulerAngles.z);
         isReturningToZero = false;
     }
 
