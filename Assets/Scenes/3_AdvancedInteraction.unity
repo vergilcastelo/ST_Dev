@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 79700687}
   - component: {fileID: 79700690}
   - component: {fileID: 79700689}
-  - component: {fileID: 79700688}
   m_Layer: 0
   m_Name: backplate
   m_TagString: Untagged
@@ -157,20 +156,6 @@ Transform:
   m_Father: {fileID: 290183440}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &79700688
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 79700686}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &79700689
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -479,8 +464,8 @@ GameObject:
   - component: {fileID: 419991865}
   - component: {fileID: 419991869}
   - component: {fileID: 419991868}
-  - component: {fileID: 419991867}
   - component: {fileID: 419991870}
+  - component: {fileID: 419991871}
   m_Layer: 0
   m_Name: dial
   m_TagString: Untagged
@@ -496,27 +481,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419991864}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.15000002}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.15000004, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 801580158}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &419991867
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419991864}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &419991868
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -576,9 +547,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 419991864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdf2715f1a36d494588571710a684805, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e11aafe76babed4e85796a10ebfba36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &419991871
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419991864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &801580157
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,8 +727,8 @@ GameObject:
   - component: {fileID: 1284971344}
   - component: {fileID: 1284971348}
   - component: {fileID: 1284971347}
-  - component: {fileID: 1284971346}
   - component: {fileID: 1284971349}
+  - component: {fileID: 1284971350}
   m_Layer: 0
   m_Name: dial
   m_TagString: Untagged
@@ -759,27 +744,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284971343}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.15000002}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.15000004, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 290183440}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1284971346
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284971343}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1284971347
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -842,6 +813,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd26906d5337c754da6282628eabb7ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &1284971350
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284971343}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1287370806
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,7 +936,6 @@ GameObject:
   - component: {fileID: 1501384995}
   - component: {fileID: 1501384998}
   - component: {fileID: 1501384997}
-  - component: {fileID: 1501384996}
   m_Layer: 0
   m_Name: backplate
   m_TagString: Untagged
@@ -974,20 +958,6 @@ Transform:
   m_Father: {fileID: 1984280468}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1501384996
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501384994}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1501384997
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1147,8 +1117,8 @@ GameObject:
   - component: {fileID: 1959651537}
   - component: {fileID: 1959651540}
   - component: {fileID: 1959651539}
-  - component: {fileID: 1959651538}
   - component: {fileID: 1959651541}
+  - component: {fileID: 1959651542}
   m_Layer: 0
   m_Name: dial
   m_TagString: Untagged
@@ -1164,27 +1134,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959651536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.15000002}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.15000004, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1984280468}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1959651538
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959651536}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1959651539
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1244,9 +1200,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1959651536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8799dd61df4c8fc4a8eb3729d5b5c4b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 28447889d6d3e594e838c5c8f50dd039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &1959651542
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959651536}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1984280467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,7 +1262,6 @@ GameObject:
   - component: {fileID: 2061917997}
   - component: {fileID: 2061918000}
   - component: {fileID: 2061917999}
-  - component: {fileID: 2061917998}
   m_Layer: 0
   m_Name: backplate
   m_TagString: Untagged
@@ -1315,20 +1284,6 @@ Transform:
   m_Father: {fileID: 801580158}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2061917998
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061917996}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &2061917999
 MeshRenderer:
   m_ObjectHideFlags: 0

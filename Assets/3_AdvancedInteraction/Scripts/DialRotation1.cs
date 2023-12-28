@@ -22,6 +22,25 @@ public class DialRotation1 : MonoBehaviour
     //value ID
     private string valueID = ""; // For storing the value ID
 
+    //check if our mouse down is over specific GO
+    private bool IsMouseOverGameObject()
+    {
+        //raycast for hit detection of GO
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            //if our mouseclick is over the GO set to true
+            if (hit.transform == transform)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
     // Method to set the value ID
     public void SetValueID(string val)
     {
@@ -73,6 +92,17 @@ public class DialRotation1 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        //Check if our mouse is over the game object
+         if (IsMouseOverGameObject())
+        {
+            //handle rotation if true
+            HandleRotationInput();
+        }
+    }
+
+    //hadle the knob rotation
+    private void HandleRotationInput()
     {
         //rotation 
         //when left mouse button is released 
