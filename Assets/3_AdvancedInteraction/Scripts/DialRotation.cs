@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class DialRotation : MonoBehaviour
 {
+    //For range adjustments
+    [SerializeField]
+    private int minValue = 10; // Default value
+    [SerializeField]
+    private int maxValue = 75; // Default value
+
     //dispatch event on value change
     //delegate  
     public delegate void ValueChangedHandler(float newValue, string newValueID);
@@ -11,13 +17,21 @@ public class DialRotation : MonoBehaviour
     public event ValueChangedHandler OnValueChanged;
 
     //rotationspeed how fast the dial turns when mouse moves
-     private float rotationSpeed = 100f;
+    private float rotationSpeed = 100f;
     private Vector3 lastMousePosition;
 
     //track angle in degrees for constraints
     private float currentAngle;
     //for test to return to after a while
     private bool isReturningToZero = false;
+    //int for mapped range
+    private int _mappedValue;
+    public int MappedValue
+    {
+        get { return _mappedValue; }
+        private set { _mappedValue = value; } // Make it private if you want it to be read-only
+    }
+
     
     //value ID
     private string valueID = ""; // For storing the value ID
@@ -94,12 +108,22 @@ public class DialRotation : MonoBehaviour
     void Update()
     {
         //Check if our mouse is over the game object
-         if (IsMouseOverGameObject())
+        if (IsMouseOverGameObject())
         {
             //handle rotation if true
             HandleRotationInput();
-             Debug.Log("raycast hit object");
+             //Debug.Log("raycast hit object");
         }
+       
+    }
+
+    //Returns an int value corresponding to the angle for the given range
+    private int MapAngleToRange(float angle, float minAngle, float maxAngle, int minVal, int maxVal)
+    {
+        // Map the angle to the range [minValue, maxValue]
+        float t = (angle - minAngle) / (maxAngle - minAngle);
+        //lerping for linear interpolation then  round for whole number
+        return Mathf.RoundToInt(Mathf.Lerp(minVal, maxVal, 1 - t));
     }
 
     //hadle the knob rotation
@@ -147,6 +171,7 @@ public class DialRotation : MonoBehaviour
     {
         // Clamp the angle
         currentAngle = NormalizeAngle(currentAngle);
+         OnValueChanged?.Invoke(currentAngle, valueID);
 
         // Prevent rotation between 201 and 306 degrees
         if (currentAngle > 200f && currentAngle < 307f)
@@ -179,14 +204,8 @@ public class DialRotation : MonoBehaviour
             currentAngle = 0f;
             valueID = "off";
         }
-        //Snap back to 0 between 314 and 360
-        else if (currentAngle >= 314f && currentAngle <= 360f)
-        {
-            currentAngle = 0f;
-             valueID = "off";
-        }
         // Snap between 307 and 360 or (0) degrees
-        else if (currentAngle >= 307f && currentAngle <= 314f)
+        else if (currentAngle >= 307f && currentAngle <= 360f)
         {
             currentAngle = 307f;
             valueID = "test";
@@ -202,6 +221,13 @@ public class DialRotation : MonoBehaviour
         
         //dial position or y axis due to rotation in scene
         Debug.Log("rotation is " + transform.localEulerAngles.y );
+         //add mapping for knob range 
+        if (currentAngle >= 40f && currentAngle <= 200f)
+        {
+            _mappedValue= MapAngleToRange(currentAngle, 40f, 200f, minValue, maxValue);
+            Debug.Log("Mapped Value: " + _mappedValue);
+             OnValueChanged?.Invoke(currentAngle, valueID);
+        }
     }
 
     //coroutine for test delay return to zero
