@@ -21,4 +21,14 @@ Setup:
     - search GO names by input in field
     - or select search by color option
     - select an option to display GO by color
-    - select results to activatein hierarchy
+    - select results to activate in hierarchy
+
+3. Advanced Interaction:
+- Open ST_Dev project in Unity
+- Open 3_AdvancedInteraction scene
+- Build and Run
+
+Notes:
+ - 2 of the 5 challenges done so far.  I wasn't sure how long I had to complete and 
+ submit, so I decided to submit 2 for the time being and continue to do 1 more if time
+ permits. 
