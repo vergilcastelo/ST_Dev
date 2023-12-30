@@ -23,6 +23,13 @@ Setup:
     - select an option to display GO by color
     - select results to activate in hierarchy
 
+  Notes: 
+   - I modified the implementation for filtering by color. Initially, having tried the same search box
+   for both filters lead to issues in my code, specifically string to Color type, name conversion. I thought 
+   it may be more user-friendly to separate the two requirements. And add a "show available colors" selections 
+   and have the user filter when a color is chosen.
+       
+
 3. Advanced Interaction:
 - Open ST_Dev project in Unity
 - Open 3_AdvancedInteraction scene
