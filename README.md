@@ -58,6 +58,6 @@ Setup:
 
 General Notes:
  - dev_vergil branch is my working branch, pr to main after 4-5+ smaller commits 
- - 2 of the 5 challenges done so far.  I wasn't sure how long I had to complete and 
- submit, so I decided to submit 2 for the time being and continue to do 1 more if time
- permits. 
+ - 2 of the 5 challenges done at the time of initial submission 12/28.  I wasn't sure how long I had to complete and 
+ submit, so I decided to submit 2 for the time being and I am continuing work on 1 more. Target day for completion is 
+ Tuesday 01/02 since Monday is a New Years Day. 
