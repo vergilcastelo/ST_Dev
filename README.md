@@ -23,12 +23,27 @@ Setup:
     - select an option to display GO by color
     - select results to activate in hierarchy
 
+    Notes: 
+    - I modified the implementation for filtering by color. Initially, having tried the same search box
+    for both filters lead to issues in my code, specifically string to Color type, name conversion. I thought 
+    it may be more user-friendly to separate the two requirements. And add a "show available colors" selections 
+    and have the user filter when a color is chosen.
+       
+
 3. Advanced Interaction:
 - Open ST_Dev project in Unity
 - Open 3_AdvancedInteraction scene
 - Build and Run
 
-Notes:
+    Notes: 
+    - I added text output under each knob for convienience and debugging. It helped in testing the event 
+    triggers and displays value of knob position in degrees, valueID, and a mapped value.  The mapped value 
+    maps the knob angle to the knob's given range for a specific value.
+
+
+
+General Notes:
+ - dev_vergil branch is my working branch, pr to main after 4-5+ smaller commits 
  - 2 of the 5 challenges done so far.  I wasn't sure how long I had to complete and 
  submit, so I decided to submit 2 for the time being and continue to do 1 more if time
  permits. 
