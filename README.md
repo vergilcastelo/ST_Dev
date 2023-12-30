@@ -30,15 +30,29 @@ Setup:
     and have the user filter when a color is chosen.
        
 
-3. Advanced Interaction:
-- Open ST_Dev project in Unity
-- Open 3_AdvancedInteraction scene
-- Build and Run
+ 3. Advanced Interaction:
+ - Open ST_Dev project in Unity
+ - Open 3_AdvancedInteraction scene
+ - Build and Run
 
     Notes: 
     - I added text output under each knob for convienience and debugging. It helped in testing the event 
     triggers and displays value of knob position in degrees, valueID, and a mapped value.  The mapped value 
     maps the knob angle to the knob's given range for a specific value.
+
+
+ 4. Origin Shifting:
+ - Open ST_Dev project in Unity
+ - Open 4_AdvancedInteraction scene
+ - Press "Play"
+ - Game window will emulate an HMD
+ - Overlay Menu with mapping of desktop controls to HMD controls should be visible 
+
+    Notes:
+    - I used the Virtual Reality Toolkit Scene template for this challenge as it was a good starting point with much of
+    the VR framework set. I don't have an HMD unit, so I used the Mock HMD XR Player setting in the XR Plugin Management package
+    for test in the editor. That setting and some other items would need to be configured to run on an actual device. Hopefully, 
+    the Mock HMD Player is sufficent for demonstrating my understanding of the VR space and meeting challenge requirements.  
 
 
 
