@@ -51,8 +51,11 @@ Setup:
     Notes:
     - I used the Virtual Reality Toolkit Scene template for this challenge as it was a good starting point with much of
     the VR framework set. I don't have an HMD unit, so I used the Mock HMD XR Player setting in the XR Plugin Management package
-    for test in the editor. That setting and some other items would need to be configured to run on an actual device. Hopefully, 
+    for testing in the editor. That setting and some other items would need to be configured to run on an actual device. Hopefully, 
     the Mock HMD Player is sufficent for demonstrating my understanding of the VR space and meeting challenge requirements.  
+
+    - XR Origin Rig shifting is implemented by activating and/or deactivating the respective components. Another possible way would be to reparent a single XR Origin Rig between the two GO. I went with the former since my prefabs both contained an XR Origin 
+    component, and no repositioning of the rig's tranform is required. 
 
 
 
