@@ -54,6 +54,9 @@ Setup:
     for testing in the editor. That setting and some other items would need to be configured to run on an actual device. Hopefully, 
     the Mock HMD Player is sufficent for demonstrating my understanding of the VR space and meeting challenge requirements.  
 
+    - XR Origin Rig shifting is implemented by activating and/or deactivating the respective components. Another possible way would be to reparent a single XR Origin Rig between the two GO. I went with the former since my prefabs both contained an XR Origin 
+    component, and no repositioning of the rig's tranform is required. 
+
 
 
 General Notes:

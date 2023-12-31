@@ -701,7 +701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4592956391713993908, guid: c8c64fb231990c84c8729ce1e8375d25, type: 3}
       propertyPath: m_Name
-      value: Complete XR Origin Set Up Variant
+      value: XR Managers
       objectReference: {fileID: 0}
     - target: {fileID: 7179462289238023466, guid: c8c64fb231990c84c8729ce1e8375d25, type: 3}
       propertyPath: m_RootOrder
@@ -1056,63 +1056,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de39d7273cf90e349bd3ec07fbebcfad, type: 3}
---- !u!1001 &6108550775808317214
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8994314676479130853, guid: 51750fcde13709e4eb0f8d9280ce633a, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8994314676479130853, guid: 51750fcde13709e4eb0f8d9280ce633a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8994314676479130853, guid: 51750fcde13709e4eb0f8d9280ce633a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8994314676479130853, guid: 51750fcde13709e4eb0f8d9280ce633a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8994314676479130853, guid: 51750fcde13709e4eb0f8d9280ce633a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8994314676479130853, guid: 51750fcde13709e4eb0f8d9280ce633a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8994314676479130853, guid: 51750fcde13709e4eb0f8d9280ce633a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8994314676479130853, guid: 51750fcde13709e4eb0f8d9280ce633a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8994314676479130853, guid: 51750fcde13709e4eb0f8d9280ce633a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8994314676479130853, guid: 51750fcde13709e4eb0f8d9280ce633a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8994314676479130853, guid: 51750fcde13709e4eb0f8d9280ce633a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8994314676479130858, guid: 51750fcde13709e4eb0f8d9280ce633a, type: 3}
-      propertyPath: m_Name
-      value: AircraftTwo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 51750fcde13709e4eb0f8d9280ce633a, type: 3}
 --- !u!33 &8168969872160861446
 MeshFilter:
   m_ObjectHideFlags: 0
