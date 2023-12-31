@@ -16,6 +16,19 @@ public class AircraftMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Throttle control
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            // Increase speed
+            speed += 10f * Time.deltaTime; 
+        }
+        else if (Input.GetKey(KeyCode.DownArrow))
+        {
+             // Decrease speed
+            speed -= 10f * Time.deltaTime;
+        }
+        //call method to update speed
+        SetSpeed(speed);
         // Convert speed from km/hr to meters per second for Unity units
         float speedMetersPerSecond = speed * 1000f / 3600f;
         
