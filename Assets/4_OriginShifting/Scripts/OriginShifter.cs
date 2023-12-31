@@ -32,6 +32,26 @@ public class OriginShifter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //add inputs spacebar and enter
+
+        //maintain speed on spawn
+    }
+
+    //space bar spawn method
+     void SpawnPlaneTwo()
+    {
+    
+    }
+
+    //origin shift toggle method
+    void  ToggleXRRigs()
+    {
+
+    }
+
+    //get origin rig 
+    void GetXRRig(GameObject plane)
+    {
+
     }
 }
