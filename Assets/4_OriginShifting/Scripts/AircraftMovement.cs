@@ -12,6 +12,9 @@ public class AircraftMovement : MonoBehaviour
     private const float MaxSpeed = 500f;
      // Minimum speed
     private const float MinSpeed = 50f;
+    // add Yaw speed of rotation in degrees
+    public float yawSpeed = 30f;
+
 
     // Update is called once per frame
     void Update()
@@ -34,6 +37,16 @@ public class AircraftMovement : MonoBehaviour
         
         // Move the plane forward
         transform.Translate(Vector3.forward * speedMetersPerSecond * Time.deltaTime);
+
+         // Yaw control
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Rotate(Vector3.up, yawSpeed * Time.deltaTime); // Rotate to right
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Rotate(Vector3.up, -yawSpeed * Time.deltaTime); // Rotate to left
+        }
     }
 
     // Public method to set speed, can be called from other scripts or UI

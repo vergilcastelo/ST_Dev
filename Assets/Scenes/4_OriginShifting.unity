@@ -12126,6 +12126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1174092840}
+  - component: {fileID: 1174092841}
   m_Layer: 0
   m_Name: AircraftOne
   m_TagString: Untagged
@@ -12150,6 +12151,20 @@ Transform:
   m_Father: {fileID: 1783572214}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1174092841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174092839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8be89a8a8f7c0248a3d2db0ca80f181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
+  yawSpeed: 30
 --- !u!1 &1185129091
 GameObject:
   m_ObjectHideFlags: 0
@@ -15831,10 +15846,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 807051348}
     m_Modifications:
-    - target: {fileID: 3735047472340101370, guid: 085ce58b196caa446a8545c9dd388793, type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 487833529046422131, guid: 8641c8e33c9b6e54e9a26d915c6b4e1a, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -15997,6 +16008,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9213841042329470732, guid: 8641c8e33c9b6e54e9a26d915c6b4e1a, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3735047472340101370, guid: 085ce58b196caa446a8545c9dd388793, type: 3}
+      propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -16798,7 +16813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1680501587, guid: f76290e3b7d315d4e8e1fecb2b01790c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.02
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 1680501587, guid: f76290e3b7d315d4e8e1fecb2b01790c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16879,6 +16894,10 @@ PrefabInstance:
     - target: {fileID: 5563199296126487199, guid: f76290e3b7d315d4e8e1fecb2b01790c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232745470614056090, guid: f76290e3b7d315d4e8e1fecb2b01790c, type: 3}
+      propertyPath: m_Height
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f76290e3b7d315d4e8e1fecb2b01790c, type: 3}
@@ -17744,7 +17763,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.09e-43, y: 2.8287955e+31, z: 4.09e-43, w: 6.713001e+22}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
