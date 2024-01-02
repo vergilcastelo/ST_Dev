@@ -196,6 +196,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5827879378230063313, guid: de39d7273cf90e349bd3ec07fbebcfad, type: 3}
   m_PrefabInstance: {fileID: 5827879377081273590}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1174092840 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5827879378230063326, guid: de39d7273cf90e349bd3ec07fbebcfad, type: 3}
+  m_PrefabInstance: {fileID: 5827879377081273590}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1548251155
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +457,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.51e-43, y: 1.9464862e+33, z: 9.51e-43, w: 1.9669707e+32}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: -1.4282731e+15}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -761,6 +766,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8c64fb231990c84c8729ce1e8375d25, type: 3}
+--- !u!1 &1825262783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4592956391713993908, guid: c8c64fb231990c84c8729ce1e8375d25, type: 3}
+  m_PrefabInstance: {fileID: 1825262782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1825262784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825262783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c062e6c18516c544395fcd3d38dc39f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planeOnePrefab: {fileID: 1174092839}
+  planeTwoPrefab: {fileID: 8994314676479130858, guid: 51750fcde13709e4eb0f8d9280ce633a, type: 3}
 --- !u!1 &2026067043
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,12 +889,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1174092840}
     m_Modifications:
     - target: {fileID: 1252374217779548532, guid: 7d3685b750e8c504db98da5f77ac7b13, type: 3}
       propertyPath: m_Name
       value: Display
       objectReference: {fileID: 0}
+    - target: {fileID: 1252374217779548538, guid: 7d3685b750e8c504db98da5f77ac7b13, type: 3}
+      propertyPath: aircraft
+      value: 
+      objectReference: {fileID: 1174092839}
     - target: {fileID: 1252374217779548538, guid: 7d3685b750e8c504db98da5f77ac7b13, type: 3}
       propertyPath: aircraftOne
       value: 
@@ -885,7 +913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1252374217779548539, guid: 7d3685b750e8c504db98da5f77ac7b13, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1252374217779548539, guid: 7d3685b750e8c504db98da5f77ac7b13, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1006,6 +1034,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5131763782471452815, guid: de39d7273cf90e349bd3ec07fbebcfad, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827879377239626195, guid: de39d7273cf90e349bd3ec07fbebcfad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827879377239626195, guid: de39d7273cf90e349bd3ec07fbebcfad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5827879378230063313, guid: de39d7273cf90e349bd3ec07fbebcfad, type: 3}
       propertyPath: m_Name
       value: AircraftOne
