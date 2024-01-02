@@ -191,14 +191,14 @@ LightProbeGroup:
   - {x: -2.4144797, y: 0.13248897, z: 2.767537}
   - {x: -2.4144797, y: 0.13248897, z: -1}
   m_Dering: 1
+--- !u!4 &983229431 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5131763782471452815, guid: de39d7273cf90e349bd3ec07fbebcfad, type: 3}
+  m_PrefabInstance: {fileID: 5827879377081273590}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1174092839 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5827879378230063313, guid: de39d7273cf90e349bd3ec07fbebcfad, type: 3}
-  m_PrefabInstance: {fileID: 5827879377081273590}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1174092840 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5827879378230063326, guid: de39d7273cf90e349bd3ec07fbebcfad, type: 3}
   m_PrefabInstance: {fileID: 5827879377081273590}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1548251155
@@ -889,7 +889,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1174092840}
+    m_TransformParent: {fileID: 983229431}
     m_Modifications:
     - target: {fileID: 1252374217779548532, guid: 7d3685b750e8c504db98da5f77ac7b13, type: 3}
       propertyPath: m_Name
@@ -913,7 +913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1252374217779548539, guid: 7d3685b750e8c504db98da5f77ac7b13, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1252374217779548539, guid: 7d3685b750e8c504db98da5f77ac7b13, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1036,7 +1036,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5131763782471452815, guid: de39d7273cf90e349bd3ec07fbebcfad, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5827879377239626195, guid: de39d7273cf90e349bd3ec07fbebcfad, type: 3}
       propertyPath: m_LocalPosition.y
