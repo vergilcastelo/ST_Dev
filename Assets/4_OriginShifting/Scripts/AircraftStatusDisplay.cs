@@ -48,7 +48,7 @@ public class AircraftStatusDisplay : MonoBehaviour
     Vector3 GetShiftedPosition()
     {
         //temp
-        return  transform.position;
+        return  aircraft.transform.position;
     }
 
 }
