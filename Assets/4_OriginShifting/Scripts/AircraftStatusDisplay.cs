@@ -10,7 +10,7 @@ Aircraft Staus Display
 public class AircraftStatusDisplay : MonoBehaviour
 {
     //get GO
-    public GameObject aircraftOne;
+    public GameObject aircraft;
     //status display vars
     public TextMeshProUGUI speedText;
     public TextMeshProUGUI positionText;
@@ -22,22 +22,29 @@ public class AircraftStatusDisplay : MonoBehaviour
     void Start()
     {
         //get reference to aircraft movements
-        aircraftMovementScript = aircraftOne.GetComponent<AircraftMovement>();
+        aircraftMovementScript = aircraft.GetComponent<AircraftMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        speedText.text = "Speed: " + aircraftMovementScript.speed + " km/hr";
-
-        // Update Position Text
-        positionText.text = "Position: " + aircraftOne.transform.position.ToString();
-
-        // Update Shifted Position Text
-        // For shifted position update after origin shift   
-        shiftedPositionText.text = "Shifted Position: " + GetShiftedPosition();
+      UpdateDisplay();
     }
 
+    public void UpdateDisplay()
+    {
+        if (aircraftMovementScript != null)
+        {
+            // Update Speed Text
+            speedText.text = "Speed: " + aircraftMovementScript.speed + " km/hr";
+
+            // Update Position Text
+            positionText.text = "Position: " + aircraft.transform.position.ToString();
+
+            // Update Shifted Position Text
+            shiftedPositionText.text = "Shifted Position: " + GetShiftedPosition();
+        }
+    }
     Vector3 GetShiftedPosition()
     {
         //temp

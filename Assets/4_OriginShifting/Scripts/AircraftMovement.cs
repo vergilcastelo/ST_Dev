@@ -14,6 +14,7 @@ public class AircraftMovement : MonoBehaviour
     private const float MinSpeed = 50f;
     // add Yaw speed of rotation in degrees
     public float yawSpeed = 30f;
+    
 
 
     // Update is called once per frame
